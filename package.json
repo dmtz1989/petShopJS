@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dmtz1989/petShopJS/issues"
   },
-  "homepage": "https://github.com/dmtz1989/petShopJS#readme"
+  "homepage": "https://github.com/dmtz1989/petShopJS#readme",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
 }

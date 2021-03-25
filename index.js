@@ -1,5 +1,8 @@
 const nomeEmpresa = "Petshop JS";
 
+const data = new Date();
+
+
 let pets = [{
     nome: 'Billy',
     tipo: 'cachorro',
@@ -15,7 +18,7 @@ let pets = [{
     nome: 'Scooby',
     tipo: 'Cachorro',
     idade: 10,
-    raça: 'Dogue Alemãp',
+    raça: 'Dogue Alemão',
     peso: 30,
     tutor: 'Salsicha',
     contato: '(81)98765-4321',
@@ -44,19 +47,17 @@ let pets = [{
 
    let nomePet = 'Billy';
 
-    const vacinarPets = () => {
-        for (let pet of pets) {
-            if (nomePet == pet.nome) {
-               if (pet.vacinado == false){
-                    pet.vacinado = true;
-                    console.log("o pet " + pet.nome + " foi vacinado");
+    const vacinarPet = () => {
+       
+               if (pets.vacinado == false){
+                    pets.vacinado = true;
+                    console.log("o pet foi vacinado");
             } else
-                console.log("o pet " + pet.nome + " ja está vacinado");
-        }   
-    }
-}
+                console.log("o pet ja está vacinado");
+                console.log('o pet foi vacinado em ' + data);
+        }  
 
-let cont = 0;
+    let cont = 0;
 
      const campanhaVacina = () => {
         for (let pet of pets) {
@@ -65,6 +66,7 @@ let cont = 0;
                 cont++;
             } 
         } console.log("foram vacinados " + cont + " pets");
+            console.log("os pets foram vacinados na data " + data);
     }
 
 
@@ -83,5 +85,5 @@ let novoPet = {
     pets.push(novoPet);
 
 listarPets();
-vacinarPets();
+vacinarPet(pets[0]);
 campanhaVacina();
