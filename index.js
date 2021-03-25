@@ -12,7 +12,7 @@ let pets = [{
     tutor: 'William Faraday',
     contato: '(81)99999-9999',
     vacinado: false,
-    servicos: ['banho','tosa']
+    servicos: []
 },
 {
     nome: 'Scooby',
@@ -23,7 +23,7 @@ let pets = [{
     tutor: 'Salsicha',
     contato: '(81)98765-4321',
     vacinado: false,
-    servicos: ['banho','tosa','manicure']
+    servicos: []
 
 },
 {
@@ -84,6 +84,39 @@ let novoPet = {
 
     pets.push(novoPet);
 
+const darBanhoPet = () => {
+    for(let pet of pets){
+        if(pet.nome == nomePet){
+            pet.servicos.push('banho');
+            console.log(`${pet.nome} está de banho tomado`);
+            console.log(`Serviço realizado na data: ${data}`)
+        }
+    }
+};
+
+const tosarPet = () => {
+    for(let pet of pets){
+        if(pet.nome == nomePet){
+            pet.servicos.push('tosa');
+            console.log(`${pet.nome} está com o cabelinho na régua`);
+            console.log(`Serviço realizado na data: ${data}`)
+        }
+    }
+};
+
+const apararUnhasPet = () => {
+    for(let pet of pets){
+        if(pet.nome == nomePet){
+            pet.servicos.push('corte de unhas');
+            console.log(`${pet.nome} está de unhas aparadas`);
+            console.log(`Serviço realizado na data: ${data}`)
+        }
+    }
+};
+
 listarPets();
 vacinarPet(pets[0]);
 campanhaVacina();
+darBanhoPet();
+tosarPet();
+apararUnhasPet();
