@@ -8,7 +8,7 @@ let pets = [{
     peso: 5,
     tutor: 'William Faraday',
     contato: '(81)99999-9999',
-    vacinado: true,
+    vacinado: false,
     servicos: ['banho','tosa']
 },
 {
@@ -19,7 +19,7 @@ let pets = [{
     peso: 30,
     tutor: 'Salsicha',
     contato: '(81)98765-4321',
-    vacinado: true,
+    vacinado: false,
     servicos: ['banho','tosa','manicure']
 
 },
@@ -35,7 +35,6 @@ let pets = [{
     servicos: ['banho','tosa']
 }
 ];
-
     const listarPets = () => {
         for(let pet of pets) {
             //console.log(pets[i].nome);
@@ -43,4 +42,46 @@ let pets = [{
         }
     }
 
+   let nomePet = 'Billy';
+
+    const vacinarPets = () => {
+        for (let pet of pets) {
+            if (nomePet == pet.nome) {
+               if (pet.vacinado == false){
+                    pet.vacinado = true;
+                    console.log("o pet " + pet.nome + " foi vacinado");
+            } else
+                console.log("o pet " + pet.nome + " ja está vacinado");
+        }   
+    }
+}
+
+let cont = 0;
+
+     const campanhaVacina = () => {
+        for (let pet of pets) {
+            if(pet.vacinado == false){
+                pet.vacinado = true
+                cont++;
+            } 
+        } console.log("foram vacinados " + cont + " pets");
+    }
+
+
+let novoPet = {
+        nome: 'Salém',
+        tipo: 'gato',
+        idade: 1237,
+        raça: 'preto',
+        peso: 5,
+        tutor: 'sabrina',
+        contato: '(81)96666-6666',
+        vacinado: false,
+        servicos: ['banho','tosa']
+    }
+
+    pets.push(novoPet);
+
 listarPets();
+vacinarPets();
+campanhaVacina();
