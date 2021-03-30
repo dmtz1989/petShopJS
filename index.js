@@ -101,13 +101,11 @@ const clientePremium = (pet) => {
     } else {
         console.log(`Olá, ${pet.nome}! Você ainda não tem descontos =( `);
     }
-}
-
-listarPets();
+};
+//listarPets();
+clientePremium(bancoDados.pets[1]);
 /*atenderCliente(bancoDados.pets[4], apararUnhasPet);
 console.log(bancoDados.pets[4].servicos);*/
-
 //console.log("-----------")
 //listarPets();
-
 // console.log(pets)
