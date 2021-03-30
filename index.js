@@ -6,7 +6,7 @@ let bancoDados = fs.readFileSync('./arquivo.json');
 bancoDados = JSON.parse(bancoDados);
 
 const atualizarDados = () => {
-    let petsAtualizado = JSON.stringify(bancoDados);
+    let petsAtualizado = JSON.stringify(bancoDados, null, 2);
     fs.writeFileSync('arquivo.json', petsAtualizado, 'utf-8');
 }
 const listarPets = () => {
