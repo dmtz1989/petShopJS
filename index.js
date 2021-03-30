@@ -16,7 +16,7 @@ const listarPets = () => {
         (pet.vacinado) ? console.log("o pet está vacinado \n") : console.log("o pet ainda não foi vacinado \n")
         for (const servico of pet.servicos) {
         console.log(`${servico.data} - ${servico.nome}`);*/
-bancoDados.pets.array.forEach((pet)=> {
+bancoDados.pets.forEach((pet)=> {
     console.log(`${pet.nome}, ${pet.idade}, ${pet.tipo}, ${pet.raca}, ${(pet.vacinado) ? 'vacinado': 'não vacinado' }`);
     
     pet.servicos.forEach((servico) =>{
@@ -103,7 +103,7 @@ const clientePremium = (pet) => {
     }
 }
 
-
+listarPets();
 /*atenderCliente(bancoDados.pets[4], apararUnhasPet);
 console.log(bancoDados.pets[4].servicos);*/
 
